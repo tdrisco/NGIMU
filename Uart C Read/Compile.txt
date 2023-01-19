@@ -1,0 +1,1 @@
+gcc -Wall NGIMU_ReadTest.c NgimuReceive.c OscAddress.c OscBundle.c OscCommon.c OscError.c OscMessage.c OscPacket.c OscSlip.c -o myProg -lm -lwiringPi

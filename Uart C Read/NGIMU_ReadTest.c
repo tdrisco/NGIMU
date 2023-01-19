@@ -34,7 +34,7 @@ int main() {
 
     /*Setup*/
     
-    if ((serial_port = serialOpen("/dev/ttyAMA1", 115200)) < 0) {	/* open serial port: uart4 */ 
+    if ((serial_port = serialOpen("/dev/ttyACM0", 115200)) < 0) {	/* open serial port: uart4 (ttyAMA1)*/ 
 		fprintf(stderr, "Unable to open serial device 1: %s\n", strerror(errno)) ;
 		return 1 ;
 	}
@@ -62,7 +62,7 @@ int main() {
         end = clock();
         exeTime = (double)(end-start)/CLOCKS_PER_SEC;
         count = count+1;
-        if(exeTime>=15){
+        if(exeTime>=1){
             break;
         }
         
